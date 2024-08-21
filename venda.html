@@ -1,0 +1,157 @@
+    <section class="sell">
+        <h1>VEÍCULOS PARA VENDA</h1>
+        <div class="center">
+            <div class="filter">
+                <form>
+                    <div class="single_form">
+                        <h2>Filtre por preço</h2>
+                        <input title="preço" id="filter_price" value="0" min="0" max="100" step="1" name="filter_price" type="range">
+                        <span class="price_actual">R$0,00</span>
+                        <span>R$70.000</span>
+                        <div class="progress" id="progress"></div>
+                        <div class="clear"></div><!--clear-->
+                    </div><!--single form-->
+                    <div class="single_form">
+                        <h2>Filtre por ano</h2>
+                        <div class="filter_year">
+                            <div class="filter-year_single">
+                                <input checked title="opção 1" type="checkbox" id="check1">
+                                <label for="check1"></label>
+                                <span>Todas as décadas</span>
+                            </div><!--filter year single-->
+                            <div class="filter-year_single">
+                                <input title="opção 2" type="checkbox" id="check2">
+                                <label for="check2"></label>
+                                <span>2000 a 2009</span>
+                            </div><!--filter year single-->
+                            <div class="filter-year_single">
+                                <input title="opção 3" type="checkbox" id="check3">
+                                <label for="check3"></label>
+                                <span>1990 a 1999</span>
+                            </div><!--filter year single-->
+                            <div class="filter-year_single">
+                                <input title="opção 4" type="checkbox" id="check4">
+                                <label for="check4"></label>
+                                <span>1980 a 1989</span>
+                            </div><!--filter year single-->
+                            <div class="filter-year_single">
+                                <input title="opção 5" type="checkbox" id="check5">
+                                <label for="check5"></label>
+                                <span>1970 a 1979</span>
+                            </div><!--filter year single-->
+                            <div class="filter-year_single">
+                                <input title="opção 6" type="checkbox" id="check6">
+                                <label for="check6"></label>
+                                <span>1960 a 1969</span>
+                            </div><!--filter year single-->
+                        </div><!--filter year-->
+                    </div><!--single form-->
+                </form><!--form-->
+            </div><!--filter-->
+            <div class="shop_list">
+                <div class="shop_column">
+                    <div class="cars_single">
+                        <div class="img"></div>
+                        <h2>Volkswagen Karmann-ghia</h2>
+                        <p>
+                            1.6 8v, Gasolina, 2P, Manual
+                            <br>
+                            1969
+                        </p>
+                        <a href="./volkswagenKarmann-venda">Mais detalhes</a>
+                    </div><!--cars_single-->
+                    <div class="cars_single">
+                        <div class="img"></div>
+                        <h2>Chevrolet Opala</h2>
+                        <p>
+                            4cc, Bancos de Corvin, 2,5
+                            <br>
+                            1980
+                        </p>
+                        <a href="./chevrolet-venda">Mais detalhes</a>
+                    </div><!--cars_single-->
+                    <div class="cars_single">
+                        <div class="img"></div>
+                        <h2>Volkswagen Gol GTs</h2>
+                        <p>
+                            Turbo forjado, xenon e alturas
+                            <br>
+                            legalizadas, 1991
+                        </p>
+                        <a href="./volkswagenGol-venda">Mais detalhes</a>
+                    </div><!--cars_single-->
+                </div><!--column-->
+                <div class="shop_colum">              
+                    <div class="cars_single">
+                        <div class=></div>
+                        <h2>Volkswagen Karmann-ghia</h2>
+                        <p>
+                            1.6 8v, Gasolina, 2P, Manual
+                            <br>
+                            1969
+                        </p>
+                        <a href="#">Mais detalhes</a>
+                    </div><!--cars_single-->
+                    <div class="cars_single">
+                        <div class="img"></div>
+                        <h2>Chevrolet Opala</h2>
+                        <p>
+                            4cc, Bancos de Corvin, 2,5
+                            <br>
+                            1980
+                        </p>
+                        <a href="#">Mais detalhes</a>
+                    </div><!--cars_single-->
+                    <div class="cars_single">
+                        <div class="img"></div>
+                        <h2>Volkswagen Gol GTs</h2>
+                        <p>
+                            Turbo forjado, xenon e alturas
+                            <br>
+                            legalizadas, 1991
+                        </p>
+                        <a href="#">Mais detalhes</a>
+                    </div><!--cars_single-->
+                </div><!--column-->
+            </div><!--shop list-->
+        </div><!--center-->
+    </section><!--sell-->
+    <script>
+        /* Filtro de preço */
+        const slider = document.getElementById('filter_price');
+        const progress = document.getElementById('progress');
+
+        slider.addEventListener('input', () => {
+            var priceActual = 0, priceMax = 70000, currentValue = slider.value;
+            
+            progress.style.width = currentValue + "%";
+
+            priceActual = (currentValue / 100) * priceMax;
+            priceActual = formatPrice(priceActual);
+            $('.price_actual').html(`R$${priceActual}`);
+
+        });
+
+        function formatPrice(priceActual) {
+            let priceArr, newPrice;
+
+            priceActual = priceActual.toFixed(2);
+            priceArr = priceActual.split('.');
+
+            newPrice = formatTotal(priceArr);
+
+            return newPrice;
+        };
+
+        function formatTotal(priceArr) {
+            if(priceArr[0] < 1000) {
+                return priceArr[0] + ',' + priceArr[1];
+            }
+            else if(priceArr[0] < 10000) {
+                return priceArr[0][0] + '.' + priceArr[0].substr(1, priceArr[0].length) + ',' + priceArr[1];
+            }
+            else {
+                return priceArr[0][0] + priceArr[0][1] + '.' + priceArr[0].substr(2, priceArr[0].length) + ',' + priceArr[1];
+            };
+        };
+    </script>

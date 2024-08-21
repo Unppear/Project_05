@@ -1,0 +1,6 @@
+Partes do site para fazer hoje:
+
+- ajeitar o filtro de preço -- feito --
+- começar o filtro por ano -- feito --
+- alinhar as duas colunas -- feito --
+- responsivo

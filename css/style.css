@@ -1,0 +1,2576 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../font/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+/* Resetando o documento */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+html,body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+/* Classes auxiliares */
+.clear {
+    clear: both;
+}
+/* Cabeçalho */
+header {
+    background-color: #fafafa;
+    padding: 25px 0;
+    border-bottom: 4px solid #eb2d2d;
+}
+/* Container de centralização */
+.center {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* --- HOME PAGE --- */
+/* Header: logo */
+div.logo img {
+    width: 77%;
+}
+/* Header: lista do menu desktop */
+nav.desktop ul {
+    list-style-type: none;
+    position: relative;
+    top: 21px;
+}
+/* Header: item da lista */
+nav.desktop li {
+    display: inline-block;
+}
+/* Header: separação dos links do menu desktop */
+nav.desktop li:not(:last-of-type) {
+    margin-right: 25px;
+}
+/* Header: links do menu */
+nav.desktop a {
+    display: inline-block;
+    color: #211b15;
+    font-size: 17px;
+    font-style: italic;
+    transition: 0.7s;
+    text-decoration: none;
+}
+/* Header e Footer: efeito dos links */
+nav.desktop a:not(a.active):hover {
+    transform: scale(1.1);
+}
+/* Header: menu mobile */
+nav.mobile {
+    display: none;
+    position: relative;
+}
+/* Header: icone do menu */
+nav.mobile > i {
+    position: relative;
+    color: #eb2d2d;
+    cursor: pointer;
+    transition: 0.7s;
+    top: 24px;
+}
+nav.mobile > i:hover {
+    transform: scale(1.1);
+}
+/* Header: lista do menu mobile */
+nav.mobile ul {
+    list-style-type: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-radius: 25px 0 0 25px;
+    transform: translate(70px, -6px);
+    width: 70px;
+    transition: 0.7s;
+    z-index: 10;
+    background-color: #eb2d2d;
+}
+/* Header: itens do menu mobile */
+nav.mobile li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Header: links do menu mobile */
+nav.mobile a {
+    color: #eb2d2d;
+    width: 40px;
+    padding: 11.5px 0;
+    height: 40.6px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    transition: 0.7s;
+    background-color: #fafafa;
+}
+/* Header: efeito do ultimo icone */
+nav.mobile li:nth-of-type(7) a:hover {
+    transform: scale(1.1);
+}
+/* Header: efeito no tamanho dos icones para caber a etiqueta */
+nav.mobile li:not(:nth-of-type(7)) a:hover, nav.mobile li:not(:nth-of-type(7)) a:active {
+    height: 65.2px;
+}
+nav.mobile li:nth-of-type(3) a:hover, nav.mobile li:nth-of-type(3) a:active, nav.mobile li:nth-of-type(4) a:hover, nav.mobile li:nth-of-type(4) a:active, nav.mobile li:nth-of-type(6) a:hover, nav.mobile li:nth-of-type(6) a:active {
+    width: 47px;
+}
+nav.mobile li:nth-of-type(5) a:hover, nav.mobile li:nth-of-type(5) a:active {
+    height: 80px;
+}
+/* Header: efeito nos tooltips */
+nav.mobile a:hover span {
+    opacity: 1;
+    width: 40px;
+}
+nav.mobile li:nth-of-type(3) a:hover span, nav.mobile li:nth-of-type(3) a:active span, nav.mobile li:nth-of-type(4) a:hover span, nav.mobile li:nth-of-type(4) a:active span, nav.mobile li:nth-of-type(6) a:hover span, nav.mobile li:nth-of-type(6) a:active span {
+    width: 47px;
+    opacity: 1;
+}
+/* Header: etiqutas do dos links */
+nav.mobile span {
+    display: block;
+    position: absolute;
+    width: 40px;
+    transition: 0.7s;
+    opacity: 0;
+    margin-top: 9px;
+}
+/* Header: icone de fechar o menu */
+nav.mobile ul li:last-of-type i {
+    font-size: 30px;
+    padding-top: 10px;
+}
+/* Banner */
+section.banner {
+    background-color: #010101;
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/bg.jpg');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+/* Banner: container de centralização */
+section.banner div.center {
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+/* Banner: container dos textos */
+div.banner_box {
+    transform: translate(-271px, -18px);
+    font-style: italic;
+}
+/* Banner: texto do banner */
+div.banner_text {
+    background-image: url('../img/box-text.png');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 286px;
+    height: 74px;
+    padding-top: 6px;
+    color: #fafafa;
+    text-align: center;
+    font-size: 40px;
+}
+/* Banner: texto branco do banner */
+div.banner_text.white {
+    background-image: url('../img/box-white-text.png');
+    color: #010101;
+    font-size: 23px;
+    position: relative;
+    left: -31px;
+    padding-top: 11px;
+    height: 57px;
+    margin-top: 15px;
+    width: 440px;
+}
+/* Separação entre os textos dos banners */
+div.banner_text:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+/* Banner: larguras dos textos */
+div.banner_text:nth-of-type(2) {
+    position: relative;
+    left: -9px;
+    width: 195px;
+}
+div.banner_text:nth-of-type(3) {
+    width: 163px;
+    position: relative;
+    left: -17px;
+}
+/* Highways: alinhando os elementos */
+section.highways {
+    align-items: center;
+    display: flex;
+    padding: 62px 0 100px;
+    font-style: italic;
+    flex-direction: column;
+}
+/* Highways: título da vitrine */
+section.highways h1 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 62px;
+}
+/* Highways: linha á esquerda do título */
+section.highways h1::before {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #010101;
+    height: 2.5px;
+    border-radius: 5px;
+    width: 250px;
+    top: 27px;
+    left: -109%;
+}
+/* Highways: linha á direita do título */
+section.highways h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -17px;
+    left: 110%;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: #010101;
+    width: 250px;
+}
+/* Highways: container da vitrine de carros */
+div.cars {
+    display: flex;
+    justify-content: center;
+}
+/* Highways: container da imagem */
+div.img {
+    height: 190px;
+    width: 240px;
+    background-size: cover;
+    background-position: center;
+    background-color: #999;
+    border-radius: 3px;
+}
+div.cars_single:nth-of-type(1) div.img {
+    background-image: url('../img/carro-volks-karmann.jpg');
+}
+div.cars_single:nth-of-type(2) div.img {
+    background-image: url('../img/carro-opala.jpg');
+}
+div.cars_single:nth-of-type(3) div.img {
+    background-image: url('../img/carro-volks-gts.jpg');
+}
+/* Highways: separação da vitrine de carros */
+div.cars_single:not(:last-of-type) {
+    margin-right: 40px;
+}
+/* Highways: título dos carros */
+div.cars_single h2 {
+    font-weight: normal;
+    font-size: 19px;
+    margin-top: 12px;
+}
+/* Highways: subtexto */
+div.cars_single p {
+    font-size: 15px;
+    color: #353535;
+}
+/* Highways: botão */
+div.cars_single a, .description-item button {
+    background-color: #eb2d2d;
+    color: #fafafa;
+    border: 2px solid #b21e1e;
+    border-radius: 3px;
+    padding: 5px 8px 5px 11px;
+    font-size: 18px;
+    height: 41px;
+    transition: 0.7s;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 13px;
+    width: 121.94px;
+}
+/* Highways: largura dos botões */
+div.cars_single:nth-of-type(2) a {
+    width: 123px;
+}
+div.cars_single:nth-of-type(3) a {
+    width: 126px;
+}
+div.cars_single a:hover, .description-item button:hover {
+    transform: scale(1.1);
+    background-color: #fafafa;
+    color: #b21e1e;
+}
+/* Dual info */
+section.dual_info {
+    color: #fafafa;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    font-style: italic;
+}
+/* Dual info: container dos serviços */
+div.services {
+    width: 50%;
+    padding: 70px 0 70px 170px;
+    background-color: #242424;
+}
+/* Dual info: título da aba serviços */
+div.services h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+/* Dual info: container dos serviços */
+div.services_info {
+    display: flex;
+}
+/* Dual info: lista de serviços */
+div.services ul {
+    list-style-type: none;
+    padding-left: 18px;
+    margin-top: 15px;
+}
+/* Dual info: informações da lista */
+div.services_info li {
+    font-size: 19px;
+}
+/* Dual info: marcação da lista */
+div.services_info li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+/* Dual info: botão */
+div.services_info a {
+    font-style: italic;
+    height: 41px;
+    color: #fafafa;
+    display: inline-block;
+    background-color: #eb2d2d;
+    padding-bottom: 1px;
+    font-size: 18px;
+    padding: 5px 8px 5px 11px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid #b21e1e;
+    transition: 0.7s;
+    align-self: flex-end;
+    margin-left: 55px;
+    width: 100px;
+}
+div.services_info a:hover {
+    background-color: #fafafa;
+    color: #b21e1e;
+    transform: scale(1.1);
+}
+/* Dual info: container dos depoimentos */
+div.depoiments {
+    width: 50%;
+    background-color: #eb2d2d;
+    padding: 75px 80px 60px;
+}
+/* Dual info: conteudo dos depoimentos */
+div.depoiments_content {
+    padding-left: 11px;
+}
+/* Dual info: título da aba depoimentos */
+div.depoiments h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+/* Dual info: texto do depoimento */
+div.depoiments_content q {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 19px;
+}
+/* Dual info: nome do autor */
+div.depoiments_content p {
+    position: relative;
+    left: 217px;
+    margin-top: 29px;
+    color: #010101;
+    font-size: 19px;
+}
+/* Contact us */
+section.contact_us {
+    padding: 70px 0 60px;
+}
+/* Contact us: container de centralização */
+section.contact_us div.center {
+    flex-direction: column;
+    align-items: center;
+}
+/* Contact us: título principal */
+section.contact_us h1 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 28px;
+}
+/* Contact us: linha á esquerda do título */
+section.contact_us h1::before {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #010101;
+    height: 2.5px;
+    border-radius: 5px;
+    width: 220px;
+    top: 25px;
+    left: 105%;
+}
+/* Contact us: linha á direita do título */
+section.contact_us h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: #010101;
+    width: 220px;
+    top: -19px;
+    left: -111%;
+}
+/* Contact us: formulario */
+section.contact_us form {
+    margin-top: 30px;
+    width: 51%;
+}
+/* Contact us: container dos inputs */
+div.form_single {
+    width: 98%;
+}
+div.form_single:not(:nth-of-type(1)) {
+    margin-top: 15px;
+}
+div.form_single:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Contact us: input */
+div.form_single input[type=text], div.form_single input[type=email], div.form_single input[type=tel] {
+    height: 40px;
+    padding-left: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: 0.7s;
+    padding-top: 3px;
+    display: inline-block;
+}
+div.form_single input[type=text]:focus, div.form_single input[type=email]:focus, div.form_single input[type=tel]:focus, div.form_single textarea:focus {
+    outline: 0;
+    border-color: #999;
+}
+div.form_single input[type=text]::placeholder, div.form_single input[type=email]::placeholder, div.form_single input[type=tel]::placeholder, div.form_single textarea::placeholder {
+    font-style: italic;
+    font-size: 22px;
+    color: #e2e2e2;
+}
+div.form_single input[type=text]:hover, div.form_single input[type=email]:hover, div.form_single input[type=tel]:hover, div.form_single textarea:hover {
+    border-color: #b4b4b4;
+}
+/* Contact us: largura dos inputs menores */
+div.form_single input[type=email], div.form_single input[type=tel] {
+    width: 49%;
+}
+/* Contact us: campo da mensagem */
+div.form_single textarea {
+    width: 100%;
+    transition: 0.7s;
+    height: 190px;
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 3px;
+    padding: 10px 0 0 16px;
+    font-size: 14px;
+}
+div.form_single textarea::placeholder {
+    transform: translateY(-7px);
+} 
+/* Contact us: ultimo container com input */
+div.form_single:last-of-type {
+    text-align: center;
+}
+/* Contact us: botao de enviar */
+div.form_single input[type=submit] {
+    background-color: #eb2d2d;
+    color: #fafafa;
+    font-size: 16px;
+    height: 38px;
+    cursor: pointer;
+    transition: 0.7s;
+    width: 65px;
+    padding-right: 3px;
+    font-style: italic;
+    border: 2px solid #b21e1e;
+    border-radius: 3px;
+}
+div.form_single input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #fafafa;
+    color: #b21e1e;
+}
+/* Footer */
+footer {
+    color: #fafafa;
+    background-color: #252525;
+    padding: 30px 0;
+    border-top: 4px solid #eb2d2d;
+    font-style: italic;
+    font-size: 14px;
+}
+/* Footer: lista do menu */
+footer ul {
+    list-style-type: none;
+}
+/* Footer: alinhamento dos links */
+footer li {
+    display: inline-block;
+}
+footer li:not(:last-of-type) {
+    margin-right: 25px;
+}
+/* Footer: links */
+footer a {
+    text-decoration: none;
+    color: #fafafa;
+    display: inline-block;
+    transition: 0.7s;
+}
+footer a:not(a.active):hover {
+    transform: scale(1.1);
+}
+/* --- END HOME PAGE --- */
+
+/* --- SELL PAGE --- */
+section.sell {
+    padding: 35px 0 200px;
+    font-weight: normal;
+}
+/* Sell: título principal */
+section.sell h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 60px;
+    font-weight: normal;
+    font-style: italic;
+}
+/* Sell: linha á esquerda do título */
+section.sell h1::before {
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #010101;
+    height: 1.5px;
+    border-radius: 5px;
+    width: 540px;
+    top: 22px;
+    left: 59.2%;
+}
+/* Sell: linha á direita do título */
+section.sell h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -19px;
+    left: 5.7%;
+    height: 1.5px;
+    border-radius: 5px;
+    background-color: #010101;
+    width: 540px;
+}
+/* Sell: container de centralização */
+section.sell div.center {
+    padding: 0 13.7%;
+}
+/* Sell: container do input */
+div.single_form:first-of-type {
+    position: relative;
+}
+/* Separação entre os single forms */
+div.single_form:last-of-type {
+    margin-top: 40px;
+}
+/* Sell: título dos filtros */
+div.single_form h2 {
+    font-weight: normal;
+    font-size: 23px;
+    font-style: italic;
+}
+div.single_form:first-of-type h2 {
+    margin-left: 4px;
+}
+/* Sell: campo do input de filtro de preço */
+div.single_form:first-of-type input {
+    display: block;
+    width: 250px;
+    margin-top: 13px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 2px solid #b4b4b4;
+    border-radius: 6px;
+    height: 15px;
+}
+/* Sell: track do input de filtro de preço */
+#filter_price::-webkit-slider-runnable-track {
+    width: 200px;
+}
+/* Sell: bolinha do input de filtro de preço */
+div.single_form:first-of-type input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    border-radius: 5px;
+    height: 22px;
+    border: 2px solid #d4d4d4;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+/* Sell: barra de progresso do filtro */
+div.progress {
+    width: 0%;
+    height: 11px;
+    border-radius: 6px;
+    background-color: #e7e7e7;
+    position: absolute;
+    max-width: 229px;
+    top: 61%;
+    transform: translateY(-50%);
+    left: 1.1px;
+    pointer-events: none;
+}
+/* Sell: labels do filtro de preço */
+div.single_form:first-of-type span {
+    display: block;
+    float: left;
+    font-size: 15px;
+    margin-top: 5px;
+    font-style: italic;
+}
+div.single_form:first-of-type span:first-of-type {
+    margin-left: 4px;
+}
+div.single_form:first-of-type span:last-of-type {
+    float: right;
+    margin-right: 5px;
+}
+/* Sell: lista de carro a venda */
+section.sell div.shop_list {
+    display: flex;
+    font-style: italic;
+    flex-direction: column;
+}
+/* Sell: colunas da vitrine */
+section.sell div.shop_column {
+    display: flex;
+}
+section.sell div.shop_column:last-of-type {
+    margin-top: 40px;
+}
+/* Sell: alinhamento do título do filtro por ano */
+div.single_form:last-of-type h2 {
+    margin-left: 1px;
+} 
+/* Sell: container do input de filtro por ano */
+div.filter_year {
+    margin-top: 13px;
+    font-style: italic;
+    font-size: 16px
+}
+/* Sell: input do filtro por ano */
+div.filter_year input[type=checkbox] {
+    display: none;
+}
+/* Sell: labels do filtro por ano */
+div.filter_year label {
+    display: inline-block;
+    border: 2px solid #ccc;
+    height: 16px;
+    width: 16px;
+    transition: 0.7s;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+div.filter_year label:hover {
+    border-color: #999;
+}
+div.filter_year label::before {
+    content: '';
+    display: inline-block;
+    opacity: 0;
+    transition: 0.7s;
+    height: 6px;
+    width: 6px;
+    right: -3.3px;
+    top: -9.6px;
+    position: relative;
+    background-color: #010101;
+    border-radius: 100%;
+}
+div.filter_year input:checked + label:before {
+    opacity: 1;
+}
+/* Sell: span do filtro por ano */
+div.filter_year span {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    bottom: 9px;
+    left: 4px;
+}
+/* --- END SELL PAGE --- */
+
+/* <-- ITEM SELL PAGE --> */
+/* seçao principal do item */
+.item-sell {
+    font-style: italic;
+    padding: 100px 0;
+}
+/* container de centralizaçao */
+.item-sell .center {
+    padding: 0 10%;
+    justify-content: none;
+}
+/* Container onde fica as imagens */
+.display-item {
+    width: 55%;
+}
+/* Caminho ate o produto */
+.past-item {
+    padding-bottom: 5px;
+}
+.past-item a {
+    display: inline-block;
+    font-size: 20px;
+    transition: 0.7s;
+    text-decoration: none;
+}
+.past-item a:hover {
+    transform: scale(1.1);
+}
+.past-item a:visited {
+    color: #010101;
+}
+.past-item span {
+    display: inline-block;
+    font-size: 25px;
+    color: #999;
+    padding: 0 10px;
+    position: relative;
+    top: -1px;
+}
+/* Foto em destaque */
+.featured-photo {
+    background-image: url('../img/carro-volks-karmann.jpg');
+    background-position: center;
+    transition:  0.7s;
+    background-size: cover;
+    padding-top: 67%;
+    border-radius: 5px;
+    width: 100%;
+}
+.car2 {
+    background-image: url('../img/carro-volks-gts.jpg');
+}
+/* Container do carrossel de fotos */
+.caret-cont {
+    display: flex;
+    position: relative;
+}
+/* Setas do carrosel */
+.arrow-left, .arrow-right {
+    position: absolute;
+    cursor: pointer;
+    bottom: 40%;
+}
+.arrow-left i, .arrow-right i {
+    color: #eb2d2d;
+    font-size: 33px;
+    transition: 0.7s;
+}
+.arrow-left i:hover, .arrow-right i:hover {
+    transform: scale(1.2);
+}
+.arrow-left {
+    left: -4%;
+}
+.arrow-right {
+    right: -4%;
+}
+/* Carrossel de fotos */
+.caret-gallery {
+    padding-top: 20px;
+}
+/* Embrulho do carrossel */
+.caret-gallery-wrapper {
+    display: flex;
+}
+/* Embrulho das imagens */
+.photo-wrapper:nth-of-type(2) {
+    margin: 0 25px;
+}
+/* Imagens */
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+    border-radius: 3px;
+    cursor: pointer;
+}
+img.actual {
+    outline: 4px solid #c2c2c2;
+    border-radius: 5px;
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+/* Container de descriçao do produto */
+.description-item {
+    width: 45%;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+/* Preço do produto */
+.description-item h1 {
+    font-size: 25px;
+}
+/* Texto de descriçao */
+.description-item p {
+    font-size: 16px;
+    line-height: 20px;
+}
+/* Botao de compra */
+.description-item button {
+    cursor: pointer;
+    height: auto;
+    width: 20%;
+    padding:7px 0 8px;
+}
+/* --> ITEM SELL PAGE <-- */
+
+/* --- GALLERY PAGE --- */
+/* seção galeria */
+section.gallery {
+    padding: 40px 0 140px;
+    font-style: italic;
+}
+/* Título principal */
+section.gallery h1 {
+    font-weight: normal;
+    font-size: 26px;
+    text-align: center;
+}
+/* Linhas para destacar o título */
+section.gallery h1::after {
+    content: '';
+    display: inline-block;
+    width: 560px;
+    top: -10px;
+    left: 1.5%;
+    border-radius: 5px;
+    height: 1.5px;
+    position: relative;
+    background-color: #212121;
+}
+section.gallery h1::before {
+    content: '';
+    display: inline-block;
+    width: 560px;
+    top: -10px;
+    left: -1.3%;
+    border-radius: 5px;
+    height: 1.5px;
+    position: relative;
+    background-color: #212121;
+}
+/* Container de centralização */
+section.gallery div.center {
+    padding: 2% 2% 0;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+}
+/* Container da imagem do carro em destaque */
+div.main-car {
+    width: 55%;
+    height: 450px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    position: relative;
+}
+/* Imagem do carro em destaque */
+div.main-car img {
+    width: 100%;
+    height: 100%;
+}
+/* Etiqueta de exposição */
+div.tooltip {
+    background-color: #eb2d2d;
+    color: #fafafa;
+    padding: 9px 18px;
+    font-size: 17px;
+    position: absolute;
+    border-radius: 3px;
+    right: 0;
+    bottom: 50px;
+}
+/* Container pai dos outros carros */
+div.other-cars {
+    margin-top: 15px;
+    display: flex;
+    width: 55%;
+    justify-content: center;
+}
+/* Colunas das imagens */
+div.other-cars_col {
+    width: 33.3%;
+}
+div.other-cars_col:not(:last-of-type) {
+    margin-right: 15px;
+}
+/* Containers onde ficaria as imagens dos outros carros */
+div.other-cars_single {
+    width: 100%;
+    padding-top: 58%;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+div.other-cars_single:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+/* --- END GALLERY PAGE --- */
+/* --- EVENTS PAGE --- */
+/* Events */
+section.events {
+    padding: 50px 0 100px;
+}
+/* Events: título principal da seção */
+section.events h1 {
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 26px;
+}
+/* Events: linhas do título principal */
+section.events h1::before {
+    content: '';
+    display: inline-block;
+    height: 1.5px;
+    width: 40%;
+    top: -9px;
+    left: -1.2%;
+    background-color: #010101;
+    border-radius: 5px;
+    position: relative;
+}
+section.events h1::after {
+    content: '';
+    display: inline-block;
+    height: 1.5px;
+    width: 40%;
+    left: 1.5%;
+    background-color: #010101;
+    border-radius: 5px;
+    top: -9px;
+    position: relative;
+}
+/* Events: container de centralização */
+section.events div.center {
+    padding: 3% 5% 0;
+    justify-content: space-evenly;
+}
+/* Events: filtro por mês */
+div.single_form_ev {
+    font-style: italic;
+    margin-top: -16px;
+}
+/* Events: título do filtro por mês */
+div.single_form_ev h2 {
+    font-weight: normal;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+/* events: inputs do filtro por mês */
+div.filter-month_single input {
+    display: none;
+}
+/* events: labels do filtro por mês */
+div.filter-month_single label {
+    display: inline-block;
+    border: 2px solid #ccc;
+    height: 16px;
+    width: 16px;
+    transition: 0.7s;
+    border-radius: 3px;
+    cursor: pointer;
+}
+div.filter-month_single label:hover {
+    border-color: #999;
+}
+/* Events: a bolinha que aparece depois de marcar o filtro */
+div.filter-month_single label::before {
+    content: '';
+    display: inline-block;
+    opacity: 0;
+    transition: 0.7s;
+    height: 6px;
+    width: 6px;
+    right: -3.3px;
+    top: -4.5px;
+    position: relative;
+    background-color: #010101;
+    border-radius: 100%;
+}
+div.filter-month_single input:checked + label:before {
+    opacity: 1;
+}
+/* events: span do filtro por mês */
+div.filter-month_single span {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    bottom: 4px;
+    left: 4px;
+    font-size: 15px;
+}
+/* Events: container com a lista de eventos */
+div.events_list {
+    display: flex;
+}
+/* Events: colunas da lista de eventos */
+div.events_column:not(:last-of-type) {
+    margin-right: 50px;
+}
+/* Events: container individual dos eventos */
+div.events_single {
+    font-style: italic;
+}
+div.events_single:not(:last-of-type) {
+    margin-bottom: 35px;
+}
+/* Events: container onde fica a imagem */
+section.events div.img {
+    height: 130px;
+    background-color: #ccc;
+}
+/* Events: título dos eventos */
+div.events_single h2 {
+    font-weight: normal;
+    margin-top: 10px;
+}
+/* Events: local dos eventos */
+div.events_single p {
+    font-size: 14px;
+    margin-top: -2px;
+}
+/* Events: data dos eventos */
+div.events_single strong {
+    color: #eb2d2d;
+}
+/* Events: link dos eventos */
+div.events_single a {
+    background-color: #eb2d2d;
+    color: #fafafa;
+    border: 2px solid #b21e1e;
+    border-radius: 3px;
+    padding: 5px 8px 5px 8px;
+    font-size: 15px;
+    height: 36px;
+    transition: 0.7s;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 13px;
+    width: 97px;
+}
+/* Events: efeito ao passar o mouse por cima do link */
+div.events_single a:hover {
+    transform: scale(1.1);
+    background-color: #fafafa;
+    color: #eb2d2d;
+}
+/* --- END EVENTS PAGE --- */
+
+/* --- EVENTS SINGLE PAGE --- */
+/* Single event */
+section.single-event {
+    padding: 30px 0 150px;
+}
+/* Single event: título principal */
+section.single-event h1 {
+    text-align: center;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: normal;
+}
+/* Single event: linhas do título principal */
+section.single-event h1::after {
+    content: '';
+    display: inline-block;
+    height: 1.5px;
+    background-color: #010101;
+    border-radius: 5px;
+    width: 40%;
+    top: -9px;
+    left: 1.5%;
+    position: relative;
+}
+section.single-event h1::before {
+    content: '';
+    display: inline-block;
+    height: 1.5px;
+    background-color: #010101;
+    border-radius: 5px;
+    width: 40%;
+    top: -9px;
+    left: -1%;
+    position: relative;
+}
+/* Single event: container de centralização */
+section.single-event div.center {
+    justify-content: center;
+    padding: 3% 2% 0;
+}
+/* Single event: container do conteudo */
+div.content {
+    width: 45%;
+}
+/* Single event: container da imagem */
+section.single-event div.img {
+    background-color: #dadada;
+    width: 100%;
+    height: 0;
+    padding-top: 49%;
+}
+/* Single event: título do evento */
+div.content h2 {
+    font-size: 21px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 25px 0;
+}
+/* Single event: descrição do evento */
+div.content p:first-of-type {
+    font-size: 15px;
+    text-align: justify;
+}
+/* Single event: data e local d0 evento */
+div.content p:last-of-type {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 25px;
+}
+div.content p:last-of-type strong {
+    color: #eb2d2d;
+}
+/* Single event: link para voltar */
+div.content a {
+    text-decoration: none;
+    display: inline-block;
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 25px;
+    transition: 0.7s;
+    color: #010101;
+}
+/* Single event: efeito ao passar o mouse por cima do link */
+div.content a:hover {
+    transform: scale(1.1);
+}
+/* --- END EVENTS SINGLE PAGE --- */
+
+/* --- ABOUT US PAGE --- */
+/* About us */
+section.about_us {
+    padding: 50px 0 100px;
+}
+/* About us: título principal */
+section.about_us h1 {
+    text-align: center;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: normal;
+}
+/* About us: linhas do título principal */
+section.about_us h1::after {
+    content: '';
+    display: inline-block;
+    background-color: #010101;
+    border-radius: 5px;
+    height: 1.5px;
+    top: -9px;
+    left: 1.5%;
+    width: 40%;
+    position: relative;
+}
+section.about_us h1::before {
+    content: '';
+    display: inline-block;
+    background-color: #010101;
+    border-radius: 5px;
+    height: 1.5px;
+    left: -1.2%;
+    top: -9px;
+    width: 40%;
+    position: relative;
+}
+/* About us: container de centralização */
+section.about_us div.center {
+    padding: 3% 2% 0;
+    justify-content: center;
+}
+/* About us: container da imagem */
+section.about_us div.img {
+    background-color: rgba(202, 202, 202, 0.5);
+    color: #ccc;
+    display: flex;
+    width: 100%;
+    height: 340px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* About us: título secundário */
+section.about_us div.content h2 {
+    font-size: 24px;
+    margin: 30px 0 20px;
+}
+/* About us: descrição da equipe */
+section.about_us div.content p {
+    font-size: 16px;
+    margin-top: 0;
+}
+/* About us: container falando sobre o rafa */
+div.about_rafa {
+    margin-top: 40px;
+    align-items: center;
+    display: flex;
+}
+/* About us: imagem do rafa */
+div.about_rafa div.img {
+    height: 140px;
+    margin-right: 20px;
+}
+/* --- END ABOUT US PAGE --- */
+
+/* --- CONTACT PAGE --- */
+/* Contact */
+section.contact {
+    padding: 50px 0 100px;
+}
+/* Contact: título principal */
+section.contact h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: italic;
+}
+/* Contact: linhas do título principal */
+section.contact h1::after {
+    content: '';
+    background-color: #010101;
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    height: 1.5px;
+    top: -9px;
+    left: 1.5%;
+    border-radius: 5px;
+}
+section.contact h1::before {
+    content: '';
+    background-color: #010101;
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    height: 1.5px;
+    top: -9px;
+    left: -1.2%;
+    border-radius: 5px;
+}
+/* Contact: container de centralização */
+section.contact div.center {
+    align-items: center;
+    flex-direction: column;
+    padding: 3% 2% 0;
+}
+/* Contact: formulario dos inputs */
+section.contact form {
+    width: 50%;
+}
+/* Contact: input duplo */
+section.contact div.form_single:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+/* Contact: container das redes sociais */
+div.contact_social {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 15px;
+}
+/* Contact: links das redes sociais */
+div.contact_social a {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.7s;
+    color: #eb2d2d;
+}
+div.contact_social a:hover {
+    transform: scale(1.1);
+}
+/* Contact: separando os links de rede social */
+div.contact_social a:not(:last-of-type) {
+    margin-right: 20px;
+}
+/* Contact: icones de rede social */
+div.contact_social a i {
+    margin-right: 5px;
+}
+/* --- END CONTACT PAGE --- */
+/* Responsivo: para telas de celular */
+@media screen and (max-width: 600px) {
+    /* Header: menu desktop */
+    nav.desktop {
+        display: none;
+    }
+    /* Header: menu mobile */
+    nav.mobile {
+        display: block;
+    }
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-34px);
+    }
+    /* Banner: container dos textos */
+    div.banner_box {
+        transform: translate(0px, -90px);
+        width: 92%;
+    }
+    /* Banner: texto do banner */
+    div.banner_text {
+        width: 50%;
+        height: 44px;
+        font-size: 21px;
+        position: relative;
+        left: 14px;
+    }
+    div.banner_text.white {
+        font-size: 17px;
+        left: -1px;
+        height: 46px;
+        width: 100%;
+    }
+    /* Banner: larguras dos textos */
+    div.banner_text:nth-of-type(2) {
+        left: 10px;
+        width: 34%;
+    }
+    div.banner_text:nth-of-type(3) {
+        width: 26%;
+        left: 8px;
+    }
+    /* Highways: linha á esquerda do título */
+    section.highways h1::before {
+        top: -23px;
+        left: 2%;
+    }
+    /* Highways: linha á direita do título */
+    section.highways h1::after {
+        top: 23px;
+        left: 2%;
+    }
+    /* Highways: container da vitrine de carros */
+    div.cars {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    /* Highways: separação da vitrine de carros */
+    div.cars_single:nth-of-type(2) {
+        margin: 40px 0;
+    }
+    /* Dual info: container dos serviços */
+    div.services {
+        width: 100%;
+        text-align: justify;
+        padding: 70px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Dual info: título das abas */
+    div.services h1, div.depoiments h1 {
+        text-align: center;
+    }
+    /* Dual info: container dos serviços */
+    div.services_info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* Dual info: lista de serviços */
+    div.services_info ul {
+        align-self: center;
+    }
+    /* Dual info: botão */
+    div.services_info a {
+        margin-left: 0;
+        align-self: center;
+        margin-top: 40px;
+    }
+    /* Dual info: container dos depoimentos */
+    div.depoiments {
+        width: 100%;
+        padding: 70px 0;
+    }
+    /* Dual info: conteudo dos depoimentos */
+    div.depoiments_content {
+        padding-left: 0;
+    }
+    /* Dual info: texto do depoimento */
+    div.depoiments_content q {
+        padding: 0 4%;
+        text-align: center;
+    }
+    /* Dual info: quebra de linha do texto */
+    div.depoiments_content q br {
+        display: none;
+    }
+    /* Dual info: nome do autor */
+    div.depoiments_content p {
+        text-align: center;
+        left: 0;
+    }
+    section.contact_us form {
+        width: 100%;
+    }
+    /* Footer: container de centralização */
+    footer .center {
+        justify-content: normal;
+        flex-wrap: wrap;
+    }
+    /* Footer: container do menu */
+    footer nav {
+        width: 100%;
+    }
+    /* Footer: lista do menu */
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Footer: alinhamento dos links */
+    footer li:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    /* Footer: texto */
+    footer p {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+    /* Sell */
+    section.sell {
+        padding: 35px 0 200px;
+    }
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 70%;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 70%;
+        left: 50%;
+        top: 13px;
+        transform: translateX(-50%);
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0 6%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    /* Sell: container do input de filtro por ano */
+    div.filter_year {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Sell: alinhando as opções do filtro por ano */
+    div.filter-year_single:first-of-type {
+        margin-left: 20px;
+    }
+    div.filter-year_single:nth-of-type(3) {
+        margin-left: -4px;
+    }
+    div.filter-year_single:nth-of-type(4) {
+        margin-left: -3.7px;
+    }
+    div.filter-year_single:nth-of-type(5) {
+        margin-left: -7.9px;
+    }
+    div.filter-year_single:nth-of-type(6) {
+        margin-left: -5px;
+    }
+    /* Sell: alinhar o título do container com input */
+    div.single_form:first-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    div.single_form:last-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    /* Sell: bolinha da label do filtro por ano */
+    div.filter_year label::before {
+        right: -3.5px;
+    }
+    /* Sell: alinhar o input do primeiro container */
+    div.single_form:first-of-type input {
+        width: 100%;
+    }
+    /* Sell: lista de carros a venda */
+    div.shop_list {
+        padding-top: 40px;
+    }
+    /* Sell: colunas da vitrine */
+    section.sell div.shop_column {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Sell: separação da vitrine de carros */
+    section.sell div.cars_single:not(:last-of-type) {
+        margin-right: 0;
+    }
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        width: 300px;
+        display: block;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.gallery h1::before {
+        width: 300px;
+        display: block;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Container de centralização */
+    section.gallery div.center {
+        padding: 10% 2% 0;
+    }
+    /* Container da imagem do carro em destaque */
+    div.main-car {
+        width: 95%;
+        height: 100%;
+    }
+    /* Etiqueta de exposição */
+    div.tooltip {
+        padding: 7px 10px;
+        font-size: 12px;
+        bottom: 30px;
+    }
+    /* Container pai dos outros carros */
+    div.other-cars {
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+    /* Colunas das imagens */
+    div.other-cars_col {
+        width: 48%;
+    }
+    div.other-cars_col:not(:last-of-type) {
+        margin-right: 13px;
+    }
+    div.other-cars_col:nth-of-type(2), div.other-cars_col:nth-of-type(4) {
+        margin-right: 0;
+    }
+    div.other-cars_col:nth-of-type(3), div.other-cars_col:nth-of-type(4) {
+        margin-top: 15px;
+    }
+    /* Container individual das outros carros */
+    div.other-cars_single:not(:last-of-type) {
+        margin-bottom: 13px;
+    }
+    /* --- PAGE EVENTS --- */
+    /* Events: linhas do título principal */
+    section.events h1::before {
+        display: block;
+        width: 84%;
+        top: -10px;
+        left: 8%;
+    }
+    section.events h1::after {
+        display: block;
+        width: 84%;
+        left: 8%;
+        top: 13px;
+    }
+    /* Events: container de centralização */
+    section.events div.center {
+        flex-direction: column;
+        justify-content: normal;
+        padding-top: 50px;
+    }
+    /* Events: formulario do filtro por mes */
+    form.month {
+        display: flex;
+        justify-content: center;
+    }
+    /* Events: filtro por mês */
+    div.single_form_ev {
+        margin-top: 0;
+    }
+    /* Events: container com a lista de eventos */
+    div.events_list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    /* Events: colunas da lista de eventos */
+    div.events_column:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    /* --- EVENTS SINGLE PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        display: block;
+        width: 85%;
+        top: 9px;
+        left: 7%;
+    }
+    section.single-event h1::before {
+        display: block;
+        width: 85%;
+        top: -7px;
+        left: 7%;
+    }
+    /* Single event: container de centralização */
+    section.single-event div.center {
+        padding: 12% 2% 0;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 90%;
+    }
+    /* --- ABOUT US PAGE --- */
+    /* --- linhas do título principal --- */
+    section.about_us h1::after, section.contact h1::after {
+        display: block;
+        top: 9px;
+        left: 7%;
+        width: 85%;
+    }
+    section.about_us h1::before, section.contact h1::before {
+        display: block;
+        left: 7%;
+        top: -7px;
+        width: 85%;
+    }
+    /* --- container de centralização --- */
+    section.about_us div.center, section.contact div.center {
+        padding: 12% 2% 0;
+    }
+    /* About us: container falando sobre o rafa */
+    div.about_rafa {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /* About us: imagem da oficina */
+    section.about_us div.img {
+        height: 71vw;
+    }
+    /* About us: imagem do rafa */
+    div.about_rafa div.img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 71vw;
+    }
+    /* --- CONTACT PAGE --- */
+    /* Contact: formulario dos inputs */
+    section.contact form {
+        width: 95%;
+    }
+    /* Contact: input duplo */
+    section.contact div.form_single:nth-of-type(3) {
+        margin-top: 0;
+    }
+    section.contact div.form_single:nth-of-type(3) input {
+        width: 100%;
+    }
+    section.contact div.form_single:nth-of-type(3) input:first-of-type {
+        margin-bottom: 15px;
+    }
+    /* Contact: links das redes sociais */
+    div.contact_social a {
+        display: block;
+    }
+    /* Contact: separando os links de rede social */
+    div.contact_social a:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 385px) and (max-width: 415px) {
+    /* Header: classe para mostrar o menu */
+    nav.mobile ul.show {
+        transform: translateX(-33px) !important;
+    }
+}
+@media screen and (width: 428px) {
+    /* Header: classe para mostrar o menu */
+    nav.mobile ul.show {
+        transform: translateX(-32px) !important;
+    }
+}
+/* Responsivo: telas de tablets */
+@media screen and (min-width: 601px) and (max-width: 963px) {
+    /* Header: menu desktop */
+    nav.desktop {
+        display: none;
+    }
+    /* Header: menu mobile */
+    nav.mobile {
+        display: block;
+    }
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-25px);
+    }
+    /* Banner: container dos textos */
+    div.banner_box {
+        transform: translate(-39px, -18px);
+    }
+    /* Highways: linha á esquerda do título */
+    section.highways h1::before {
+        top: -23px;
+        left: 2%;
+    }
+    /* Highways: linha á direita do título */
+    section.highways h1::after {
+        top: 23px;
+        left: 2%;
+    }
+    /* Highways: container da vitrine de carros */
+    div.cars {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    /* Highways: separação da vitrine de carros */
+    div.cars_single:nth-of-type(2) {
+        margin: 40px 0;
+    }
+    /* Dual info: container dos serviços */
+    div.services {
+        width: 100%;
+        text-align: justify;
+        padding: 70px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Dual info: título das abas */
+    div.services h1, div.depoiments h1 {
+        text-align: center;
+    }
+    /* Dual info: container dos serviços */
+    div.services_info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* Dual info: lista de serviços */
+    div.services_info ul {
+        align-self: center;
+    }
+    /* Dual info: botão */
+    div.services_info a {
+        margin-left: 0;
+        align-self: center;
+        margin-top: 40px;
+    }
+    /* Dual info: container dos depoimentos */
+    div.depoiments {
+        width: 100%;
+        padding: 70px 0;
+    }
+    /* Dual info: conteudo dos depoimentos */
+    div.depoiments_content {
+        padding-left: 0;
+    }
+    /* Dual info: texto do depoimento */
+    div.depoiments_content q {
+        padding: 0 4%;
+        text-align: center;
+    }
+    /* Dual info: quebra de linha do texto */
+    div.depoiments_content q br {
+        display: none;
+    }
+    /* Dual info: nome do autor */
+    div.depoiments_content p {
+        text-align: center;
+        left: 0;
+    }
+    section.contact_us form {
+        width: 100%;
+    }
+    /* Footer: container de centralização */
+    footer .center {
+        justify-content: normal;
+        flex-wrap: wrap;
+    }
+    /* Footer: container do menu */
+    footer nav {
+        width: 100%;
+    }
+    /* Footer: lista do menu */
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Footer: alinhamento dos links */
+    footer li:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    /* Footer: texto */
+    footer p {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+    /* --- SELL PAGE --- */
+    /* Sell */
+    section.sell {
+        padding: 35px 0 200px;
+    }
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 70%;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 70%;
+        left: 50%;
+        top: 13px;
+        transform: translateX(-50%);
+    }
+    /* Sell: container do filtro por preço */
+    div.filter {
+        width: 80%;
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0 6%;
+        align-items: center;
+        flex-direction: column;
+    }
+    /* Sell: container do input de filtro por ano */
+    div.filter_year {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Sell: alinhando as opções do filtro por ano */
+    div.filter-year_single:first-of-type {
+        margin-left: 20px;
+    }
+    div.filter-year_single:nth-of-type(3) {
+        margin-left: -4px;
+    }
+    div.filter-year_single:nth-of-type(4) {
+        margin-left: -3.7px;
+    }
+    div.filter-year_single:nth-of-type(5) {
+        margin-left: -7.9px;
+    }
+    div.filter-year_single:nth-of-type(6) {
+        margin-left: -5px;
+    }
+    /* Sell: alinhar o título do container com input */
+    div.single_form:first-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    div.single_form:last-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    /* Sell: alinhar o input do primeiro container */
+    div.single_form:first-of-type input {
+        width: 100%;
+    }
+    /* Sell: bolinha da label do filtro por ano */
+    div.filter_year label::before {
+        right: -3.5px;
+    }
+    /* Sell: lista de carros a venda */
+    div.shop_list {
+        padding-top: 40px;
+    }
+    /* Sell: colunas da vitrine */
+    section.sell div.shop_column {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Sell: separação da vitrine de carros */
+    section.sell div.cars_single:not(:last-of-type) {
+        margin-right: 0;
+    }
+    /* --- GALLERY PAGE --- */
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        width: 450px;
+        display: block;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.gallery h1::before {
+        width: 450px;
+        display: block;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Container de centralização */
+    section.gallery div.center {
+        padding: 6% 2% 0;
+    }
+    /* Container da imagem do carro em destaque */
+    div.main-car {
+        width: 95%;
+        height: 100%;
+    }
+    /* Etiqueta de exposição */
+    div.tooltip {
+        padding: 7px 15px;
+        font-size: 16px;
+        bottom: 40px;
+    }
+    /* Container pai dos outros carros */
+    div.other-cars {
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+    /* Colunas das imagens */
+    div.other-cars_col {
+        width: 49%;
+    }
+    div.other-cars_col:not(:last-of-type) {
+        margin-right: 10px;
+    }
+    div.other-cars_col:nth-of-type(2), div.other-cars_col:nth-of-type(4) {
+        margin-right: 0;
+    }
+    div.other-cars_col:nth-of-type(3), div.other-cars_col:nth-of-type(4) {
+        margin-top: 10px;
+    }
+    /* Containers onde ficaria as imagens dos outros carros */
+    div.other-cars_single:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: linhas do título principal */
+    section.events h1::before {
+        display: block;
+        width: 84%;
+        top: -10px;
+        left: 8%;
+    }
+    section.events h1::after {
+        display: block;
+        width: 84%;
+        left: 8%;
+        top: 13px;
+    }
+    /* Events: container de centralização */
+    section.events div.center {
+        flex-direction: column;
+        justify-content: normal;
+        padding: 50px 2% 0;
+    }
+    /* Events: formulario do filtro por mes */
+    form.month {
+        display: flex;
+        justify-content: center;
+    }
+    /* Events: filtro por mês */
+    div.single_form_ev {
+        margin-top: 0;
+    }
+    /* Events: container com a lista de eventos */
+    div.events_list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    /* Events: colunas da lista de eventos */
+    div.events_column {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.events_column:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    /* --- EVENTS SINGLE PAGE --- */
+    /* --- linhas do título principal --- */
+    section.single-event h1::after, section.contact h1::after {
+        width: 35%;
+        left: 4.3%;
+    }
+    section.single-event h1::before, section.contact h1::before {
+        width: 35%;
+        left: -3%;
+    }
+    /* Single event: container de centralização */
+    section.single-event div.center {
+        padding: 4% 2% 0;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 98%;
+    }
+    /* --- ABOUT US PAGE --- */
+    /* About us: linhas do título principal */
+    section.about_us h1::after {
+        left: 3.7%;
+        width: 33%;
+    }
+    section.about_us h1::before {
+        left: -3%;
+        width: 33%;
+    }
+    /* About us: imagem da oficina */
+    section.about_us div.img {
+        height: 50vw;
+    }
+    /* About us: imagem do rafa */
+    div.about_rafa div.img {
+        height: 18vw;
+    }
+    /* --- CONTACT PAGE --- */
+    /* Contact: formulario dos inputs */
+    section.contact form {
+        width: 95%;
+    }
+}
+@media screen and (width: 768px) {
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-18px);
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 811px) {
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-17px);
+    }
+}
+@media screen and (min-width: 820px) and (max-width: 835px) {
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-16px);
+    }
+}
+@media screen and (min-width: 962px) and (max-width: 963px) {
+    /* Header: mostrar o menu mobile */
+    nav.mobile ul.show {
+        transform: translateX(-10px);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 963px) {
+    /* --- GALLERY PAGE --- */
+    /* Container pai dos outros carros */
+    div.other-cars {
+        flex-wrap: nowrap !important;
+    }
+    /* Separação das colunas da seção galeria */
+    div.other-cars_col:not(:last-of-type) {
+        margin-right: 10px !important;
+    }
+    div.other-cars_col:nth-of-type(3), div.other-cars_col:nth-of-type(4) {
+        margin-top: 0 !important;
+    }
+    /* --- EVENTS SINGLE PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        width: 37%;
+        left: 3.7%;
+    }
+    section.single-event h1::before {
+        width: 37%;
+        left: -3%;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 85%;
+    }
+    /* --- ABOUT US PAGE --- */
+    /* About us: linhas do título principal */
+    section.about_us h1::after {
+        left: 2.7%;
+        width: 37%;
+    }
+    section.about_us h1::before {
+        left: -2%;
+        width: 37%;
+    }
+    /* About us: imagem da oficina */
+    section.about_us div.img {
+        height: 43vw;
+    }
+    /* About us: imagem do rafa */
+    div.about_rafa div.img {
+        height: 18vw;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 963px) {
+    /* Events: container com a lista de eventos */
+    div.events_list {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    /* Events: colunas da lista de eventos */
+    div.events_column:not(:last-of-type) {
+        margin-right: 20px;
+        margin-bottom: 35px;
+    }
+}
+/* Responsivo: tablets maiores e laptops */
+@media screen and (min-width: 1024px) and (max-width: 1333px) {
+    /* Banner: container dos textos */
+    div.banner_box {
+        transform: translate(-190px, -18px);
+    }
+    /* Dual info: container dos serviços */
+    div.services {
+        padding: 70px 30px;
+    }
+    /* Dual info: container dos depoimentos */
+    div.depoiments {
+        padding: 70px 30px;
+    }
+    /* Dual info: quebra de linha do texto */
+    div.depoiments_content q br {
+        display: none;
+    }
+    /* Dual info: nome do autor */
+    div.depoiments_content p {
+        left: 163px;
+    }
+    /* Footer: container de centralização */
+    footer .center {
+        padding: 0 3%;
+    }
+    /* Sell */
+    section.sell {
+        padding: 35px 0 200px;
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 70%;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 70%;
+        left: 50%;
+        top: 13px;
+        transform: translateX(-50%);
+    }
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 70%;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 70%;
+        left: 50%;
+        top: 13px;
+        transform: translateX(-50%);
+    }
+    /* Sell: container do filtro por preço */
+    div.filter {
+        width: 80%;
+    }
+    /* Sell: alinhar o título do container com input */
+    div.single_form:first-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    div.single_form:last-of-type h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    /* Sell: alinhar o input do primeiro container */
+    div.single_form:first-of-type input {
+        width: 100%;
+    }
+    /* Sell: container do input de filtro por ano */
+    div.filter_year {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Sell: alinhando as opções do filtro por ano */
+    div.filter-year_single:first-of-type {
+        margin-left: 20px;
+    }
+    div.filter-year_single:nth-of-type(3) {
+        margin-left: -4px;
+    }
+    div.filter-year_single:nth-of-type(4) {
+        margin-left: -3.7px;
+    }
+    div.filter-year_single:nth-of-type(5) {
+        margin-left: -7.9px;
+    }
+    div.filter-year_single:nth-of-type(6) {
+        margin-left: -5px;
+    }
+    /* Sell: bolinha da label do filtro por ano */
+    div.filter_year label::before {
+        right: -3.5px;
+    }
+    /* Sell: lista de carros a venda */
+    div.shop_list {
+        padding-top: 40px;
+    }
+    /* --- GALLERY PAGE --- */
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        width: 400px;
+        top: -9px;
+        left: -48.5%;
+    }
+    section.gallery h1::before {
+        width: 400px;
+        top: -9px;
+        left: 49%;
+    }
+    /* Container da imagem do carro em destaque */
+    div.main-car {
+        width: 75%;
+    }
+    /* Container pai dos outros carros */
+    div.other-cars {
+        width: 75%;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: linhas do título principal */
+    section.events h1::before {
+        width: 40%;
+    }
+    section.events h1::after {  
+        width: 40%;
+        left: 1.9%;
+    }
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 0% 0;
+    }
+    /* --- SINGLE EVENT PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        left: 2.6%;
+    }
+    section.single-event h1::before {
+        left: -2%;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 60%;
+    }
+    /* --- ABOUT US PAGE --- */
+    /* About us: imagem da oficina */
+    section.about_us div.img {
+        height: 30vw;
+    }
+    /* About us: imagem do rafa */
+    div.about_rafa div.img {
+        height: 12vw;
+    }
+    /* --- CONTACT PAGE --- */
+    /* Contact: formulario dos inputs */
+    section.contact form {
+        width: 70%;
+    }
+}
+@media screen and (width: 1280px) {
+    /* --- GALLERY PAGE --- */
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        width: 500px;
+        top: -9px;
+        left: -46.9%;
+    }
+    section.gallery h1::before {
+        width: 500px;
+        top: -9px;
+        left: 47.2%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 1% 0;
+    }
+    /* Events: colunas da lista de eventos */
+    div.events_column:not(:last-of-type) {
+        margin-right: 20px;
+    }
+    section.contact_us form {
+        width: 68%;
+    }
+}
+@media screen and (min-width: 1334px) and (max-width: 1335px) {
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 30%;
+        left: 75.4%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 30%;
+        left: 25.1%;
+        transform: translateX(-50%);
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0 4%;
+        justify-content: space-evenly;
+    }
+    /* --- GALLERY PAGE --- */
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        width: 500px;
+        top: -9px;
+        left: -45.2%;
+    }
+    section.gallery h1::before {
+        width: 500px;
+        top: -9px;
+        left: 45.5%;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: linhas do título principal */
+    section.events h1::after {  
+        left: 1.8%;
+    }
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 0% 0;
+    }
+    /* --- SINGLE EVENT PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        left: 1.8%;
+    }
+    section.single-event h1::before {
+        left: -1.2%;
+    }
+    /* --- SINGLE EVENT --- */
+    /* Single event: container do conteudo */
+    div.content {
+        width: 51%;
+    }
+    /* --- CONTACT PAGE --- */
+    /* Contact: formulario dos inputs */
+    section.contact form {
+        width: 60%;
+    }
+}
+/* Responsivo: telas de desktop */
+@media screen and (min-width: 1360px) and (max-width: 1440px) {
+    /* Dual info: container dos serviços */
+    div.services {
+        padding: 70px 100px;
+    }
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        width: 30%;
+        left: 75.4%;
+        transform: translateX(-50%);
+    }
+    section.sell h1:after {
+        width: 30%;
+        left: 25.1%;
+        transform: translateX(-50%);
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {   
+        padding: 0 4%;
+        justify-content: space-evenly;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 0% 0;
+    }
+    /* --- SINGLE EVENT --- */
+    /* Single event: container do conteudo */
+    div.content {
+        width: 51%;
+    }
+    /* --- CONTACT PAGE --- */
+    /* Contact: formulario dos inputs */
+    section.contact form {
+        width: 55%;
+    }
+}
+@media screen and (width: 1600px) {
+    /* Sell: alinhamento do título principal */
+    section.sell h1:after {
+        left: 7.5%;
+    }
+    /* --- SINGLE EVENT PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        left: 1.4%;
+    }
+}
+@media screen and (width: 1920px) {
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        left: 57.7%;
+    }
+    section.sell h1:after {
+        left: 14.5%;
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0 13%;
+        justify-content: space-evenly;
+    }
+    /* --- GALLERY PAGE --- */
+    /* Container da imagem do carro em destaque */
+    div.main-car {
+        width: 50%;
+        height: 500px;
+    }
+    /* Container pai dos outros carros */
+    div.other-cars {
+        width: 50%;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 12% 0;
+    }
+    /* --- SINGLE EVENT PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        left: 1.4%;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 36%;
+    }
+}
+@media screen and (width: 2560px) {
+    /* Sell: alinhamento do título principal */
+    section.sell h1:before {
+        left: 55.7%;
+    }
+    section.sell h1:after {
+        left: 23.5%;
+    }
+    /* Sell: alinhamento do container de centralização */
+    section.sell div.center {
+        padding: 0 22%;
+        justify-content: space-evenly;
+    }
+    /* --- GALLERY PAGE --- */
+    /* Linhas para destacar o título */
+    section.gallery h1::after {
+        left: 1.3%;
+    }
+    section.gallery h1::before {
+        left: -1.2%;
+    }
+    /* Container da imagem do carro em destaque */
+    div.main-car {
+        width: 35%;
+    }
+    /* Container pai dos outros carros */
+    div.other-cars {
+        width: 35%;
+    }
+    /* --- EVENTS PAGE --- */
+    /* Events: container de centralização */
+    section.events div.center {
+        padding: 3% 22% 0;
+    }
+    /* --- SINGLE EVENT PAGE --- */
+    /* Single event: linhas do título principal */
+    section.single-event h1::after {
+        left: 1.3%;
+    }
+    /* Single event: container do conteudo */
+    div.content {
+        width: 32%;
+    }
+    /* --- ABOUT US PAGE --- */
+    /* About us: imagem da oficina */
+    section.about_us div.img {
+        height: 15vw;
+    }
+    /* About us: imagem do rafa */
+    div.about_rafa div.img {
+        height: 7.5vw;
+    }
+}

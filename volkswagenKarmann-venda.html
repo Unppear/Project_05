@@ -1,0 +1,109 @@
+    <section class="item-sell">
+        <div class="center">
+            <div class="display-item">
+                <div class="past-item">
+                    <a href="./venda">VENDA</a>
+                    <span>></span>
+                    <a class="active" href="./volkswagenKarmann-venda">Volkswagen Karmann</a>
+                </div><!--caminho ate o item-->
+                <div class="featured-photo"></div><!--foto em destaque-->
+                <div class="caret-cont">
+                    <div class="arrow-left"><i class="fa-solid fa-caret-left fa-lg"></i></div><!--seta da desquerda-->
+                    <div class="arrow-right"><i class="fa-solid fa-caret-right fa-lg"></i></div><!--seta da direita-->
+                    <div class="caret-gallery">
+                        <div class="caret-gallery-wrapper">
+                            <div class="photo-wrapper"><img class="actual" src="./img/carro-volks-karmann.jpg" alt="foto 1"></div><!--embrulho da foto-->
+                            <div class="photo-wrapper"><img src="./img/volkswagen-karmann-2.jpeg" alt="foto 2"></div><!--embrulho da foto-->
+                            <div class="photo-wrapper"><img src="./img/volkswagen-karmann-3.jpeg" alt="foto 3"></div><!--embrulho da foto-->
+                        </div><!--embrulho do carrossel de fotos-->
+                    </div><!--carrossel de fotos-->
+                </div><!--container do carrousel-->
+            </div><!--imagens do item-->
+            <div class="description-item">
+                <h1>R$20.000,00</h1>
+                <p>
+                    Lorem ipsum dolor sit amet. Aut eaque omnis in doloribus reprehenderit ut sint veniam ut rerum molestias et sint harum et quia sapiente.
+                    Est consequatur nemo non quia sint a delectus mollitia sit error similique cum autem quia! Aut natus distinctio ut molestiae odio ad consequatur nemo et minima velit.
+                    At architecto sunt eos fugiat ipsa ad praesentium ducimus. Eum nemo alias et officia laboriosam sit nostrum facere.
+                    Ut quibusdam numquam ut accusantium natus et neque tenetur. In reiciendis tempore sit unde dicta hic quia fuga sed debitis iste ad dolorum modi.
+                    Nam ipsum sequi sit culpa pariatur 33 libero rerum ad saepe natus non alias quos et beatae deleniti.
+                    Est Quis obcaecati aut accusantium natus ut cupiditate velit sed modi eaque sit voluptatem doloribus et autem ipsam sit repellendus officia.
+                </p>
+                <button>Comprar</button>
+            </div><!--descricao do item-->
+        </div><!--center-->
+    </section><!--item de venda-->
+    <script>
+        var arrowLeft = $('.arrow-left'), arrowRight = $('.arrow-right'), curIndex = 0, photoWrapper = $('.photo-wrapper'), photoWrapperImg = $('.photo-wrapper img'), featuredPhoto = $('.featured-photo');
+
+        arrowLeft.on('click', function() {
+            if(photoWrapperImg.eq(curIndex).hasClass('actual') == true) {
+                if(curIndex == 0 ) {
+                    photoWrapperImg.eq(curIndex).removeClass('actual');
+                    curIndex = 2;
+                    photoWrapperImg.eq(curIndex).addClass('actual');
+                    featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-3.jpeg')");
+                    return;
+                } 
+                else {    
+                    photoWrapperImg.eq(curIndex).removeClass('actual');
+                    curIndex--;
+                    photoWrapperImg.eq(curIndex).addClass('actual');
+                };
+
+                if(curIndex == 1) {
+                    featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-2.jpeg')");
+                }
+                else if(curIndex == 0) {
+                    featuredPhoto.css("background-image", "url('./img/carro-volks-karmann.jpg')");
+                };
+            }
+        });
+
+        arrowRight.on('click', function() {
+            if(photoWrapperImg.eq(curIndex).hasClass('actual') == true) {
+                if(curIndex == 2) {
+                    photoWrapperImg.eq(curIndex).removeClass('actual');
+                    curIndex = 0;
+                    photoWrapperImg.eq(curIndex).addClass('actual');
+                    featuredPhoto.css("background-image", "url('./img/carro-volks-karmann.jpg')");
+                    return;
+                } 
+                else {
+                    photoWrapperImg.eq(curIndex).removeClass('actual');
+                    curIndex++;
+                    photoWrapperImg.eq(curIndex).addClass('actual');
+                };
+
+                if(curIndex == 1) {
+                    featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-2.jpeg')");
+                }
+                else if(curIndex == 2) {
+                    featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-3.jpeg')");
+                };
+            }
+        });
+
+        photoWrapper.on('click', function() {
+            let photoIndex = $(this).index();
+
+            if(photoIndex == 0) {
+                curIndex = 0;
+                photoWrapperImg.removeClass('actual');
+                photoWrapperImg.eq(photoIndex).addClass('actual');
+                featuredPhoto.css("background-image", "url('./img/carro-volks-karmann.jpg')");
+            }
+            else if(photoIndex == 1) {
+                curIndex = 1;
+                photoWrapperImg.removeClass('actual');
+                photoWrapperImg.eq(photoIndex).addClass('actual');
+                featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-2.jpeg')");
+            }
+            else if(photoIndex == 2) {
+                curIndex = 2;
+                photoWrapperImg.removeClass('actual');
+                photoWrapperImg.eq(photoIndex).addClass('actual');
+                featuredPhoto.css("background-image", "url('./img/volkswagen-karmann-3.jpeg')");
+            }
+        });
+    </script>
