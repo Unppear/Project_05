@@ -31,6 +31,7 @@ icon_close.addEventListener('mouseleave', () => {
 });
 
 //Check Url
+
 var access = $('#contatoLink').attr('access');
 
 actualPage();
