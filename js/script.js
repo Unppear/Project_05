@@ -30,29 +30,31 @@ icon_close.addEventListener('mouseleave', () => {
     close.classList.remove('fa-flip');
 });
 
-//Check Url
-var access = $('#contatoLink').attr('access');
+$(window).on('load', function() {
+    //Check Url
+    var access = $('#contatoLink').attr('access');
 
-actualPage();
-function actualPage() {
-    var url = location.href.split('/'), curPage = url[url.length-1].split();
-
-    if(access == 'granted') {
-        $('#contatoLink').css('color', '#eb2d2d');
-        $('#contatoLink2').css('color', '#eb2d2d');
-        $('html, body').animate({scrollTop: $('.contact_us').offset().top});
-    } else if(curPage[0] === ' ') {
-        curPage[0] = 'index';
-
-        $('a[href=index]').css('color', '#eb2d2d');        
-    }
-    console.log(curPage[0]);
-};
-
-function checkAccess() {
-    event.preventDefault();
-
-    $('#contatoLink').attr('access', 'granted');
-    access = $('#contatoLink').attr('access');
     actualPage();
-};
+    function actualPage() {
+        var url = location.href.split('/'), curPage = url[url.length-1].split();
+
+        if(access == 'granted') {
+            $('#contatoLink').css('color', '#eb2d2d');
+            $('#contatoLink2').css('color', '#eb2d2d');
+            $('html, body').animate({scrollTop: $('.contact_us').offset().top});
+        } else if(curPage[0] === ' ') {
+            curPage[0] = 'index';
+
+            $('a[href=index]').css('color', '#eb2d2d');        
+        }
+        console.log(curPage[0]);
+    };
+
+    function checkAccess() {
+        event.preventDefault();
+
+        $('#contatoLink').attr('access', 'granted');
+        access = $('#contatoLink').attr('access');
+        actualPage();
+    };
+});
