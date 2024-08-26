@@ -41,13 +41,11 @@ function actualPage() {
         $('#contatoLink').css('color', '#eb2d2d');
         $('#contatoLink2').css('color', '#eb2d2d');
         $('html, body').animate({scrollTop: $('.contact_us').offset().top});
+    } else if(curPage[0] == '') {
+        curPage[0] = 'index';        
     } else {
         $('a[href=' + curPage[0] + ']').css('color', '#eb2d2d');
-            
     };
-    console.log(location)
-    
-    console.log(curPage)
 };
 
 function checkAccess() {
