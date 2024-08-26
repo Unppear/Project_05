@@ -43,6 +43,7 @@ function actualPage() {
         $('html, body').animate({scrollTop: $('.contact_us').offset().top});
     } else {
         $('a[href=' + curPage[0] + ']').css('color', '#eb2d2d');
+            
     };
 };
 
@@ -53,13 +54,3 @@ function checkAccess() {
     access = $('#contatoLink').attr('access');
     actualPage();
 };
-
-$('#slider_home').slick({
-    centerMode: false,
-    arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 1000,
-    autoplay: true,
-    autoplaySpeed: 2000
-});

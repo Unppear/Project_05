@@ -62,7 +62,7 @@
             include('404.html');
         };
     } else {
-        include('home.html');
+        include('index.html');
     };
 ?>
     <footer>
