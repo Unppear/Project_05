@@ -46,8 +46,7 @@ function actualPage() {
         $('a[href=index]').css('color', '#eb2d2d');        
     } else {
         $('a[href='+ curPage[0] +']').css('color', '#eb2d2d');
-    }
-    
+    };
 };
 
 function checkAccess() {
