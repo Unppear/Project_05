@@ -42,7 +42,9 @@ function actualPage() {
         $('#contatoLink2').css('color', '#eb2d2d');
         $('html, body').animate({scrollTop: $('.contact_us').offset().top});
     } else if(curPage[0] == ' ') {
-        curPage[0] = 'index';        
+        curPage[0] = 'index';
+        
+        $('a[href=' + curPage[0] + ']').css('color', '#eb2d2d');        
     } else {
         $('a[href=' + curPage[0] + ']').css('color', '#eb2d2d');
     };
