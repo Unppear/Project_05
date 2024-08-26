@@ -190,16 +190,6 @@
     <script src="./slick-1.8.1/slick/slick.js"></script>
     <script src="./js/script.js"></script>
     <script>
-        actualPage();
-        function actualPage() {
-            var url = location.href.split('/'), curPage = url[url.length-1].split();
-
-            if(curPage[0] == ' ') {
-                curPage[0] = 'index';
-                
-                $('a[href=' + curPage[0] + ']').css('color', '#eb2d2d');        
-            }; 
-        };
         $('#slider_home').slick({
             centerMode: false,
             arrows: false,
