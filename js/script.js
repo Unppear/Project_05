@@ -41,7 +41,7 @@ function actualPage() {
         $('#contatoLink').css('color', '#eb2d2d');
         $('#contatoLink2').css('color', '#eb2d2d');
         $('html, body').animate({scrollTop: $('.contact_us').offset().top});
-    } else if(curPage == ' ') {
+    } else if(curPage[0] == ' ') {
         curPage = 'index';
 
         $('a[href=index]').css('color', '#eb2d2d');        
