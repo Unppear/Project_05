@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 
 <html lang="pt-br">
 
@@ -18,7 +18,7 @@
             <div class="logo">
                 <img src="./img/logo.jpg" alt="logo da empresa">
             </div>
-            <!--logo-->
+            <logo
             <nav class="desktop">
                 <ul>
                     <li><a href="home">HOME</a></li>
@@ -29,7 +29,7 @@
                     <li><a access="denied" id="contatoLink" onclick="checkAccess()" href="">CONTATO</a></li>
                 </ul>
             </nav>
-            <!--desktop-->
+            <!desktop--
             <nav class="mobile">
                 <i id="bars" class="fa-solid fa-2xl fa-bars"></i>
                 <ul id="mobile">
@@ -48,23 +48,25 @@
                                 class="fa-solid fa-xmark fa-2xl"></i></a></li>
                 </ul>
             </nav>
-            <!--mobile-->
+            !--mobile--
         </div>
-        <!--center-->
+        !--center--
     </header>
-    <!--header-->
+    !--header--
     <?php
 
-    if(isset($_GET['url'])) {
+    /*if(isset($_GET['url'])) {
         if(file_exists($_GET['url']).'.html') {
             include($_GET['url'].'.html');
         } else {
             include('404.html');
         };
-    } else {
+        } else {
         include('index.html');
-    };
-?>
+        };
+    */
+    ?>
+    
     <footer>
         <div class="center">
             <nav>
@@ -77,12 +79,12 @@
                     <li><a access="denied" id="contatoLink2" onclick="checkAccess()" href="">CONTATO</a></li>
                 </ul>
             </nav>
-            <!--nav-->
+            !--nav--
             <p>Todos os direitos reservados a <strong>RM Veículos Especiais</strong></p>
         </div>
-        <!--center-->
+        !--center--
     </footer>
-    <!--footer-->
+    !--footer--
     <script src="./jquery/jquery-3.6.4.min.js"></script>
     <script src="./slick-1.8.1/slick/slick.js"></script>
     <script src="./js/script.js"></script>
