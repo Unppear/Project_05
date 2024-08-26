@@ -46,7 +46,7 @@ function actualPage() {
 
         $('a[href=index]').css('color', '#eb2d2d');        
     }
-    console.log(curPage[0])
+    console.log(curPage[0]);
 };
 
 function checkAccess() {
